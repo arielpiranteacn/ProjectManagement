@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4d3e024-bc91-487e-a1cb-54d32aa0b158" name="Changes" comment="changes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/labs/pm/data/Rateable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/labs/pm/data/Review.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/resources.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/resources2.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/resources_en_US.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/resources_fr_FR.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/resources_ru_RU.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/resources_zh_CN.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/labs/pm/app/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labs/pm/app/Shop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/labs/pm/data/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labs/pm/data/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/labs/pm/data/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labs/pm/data/ProductManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +29,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -46,12 +52,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1699251253" />
+                    <option name="branchName" value="ver2" />
+                    <option name="lastUsedInstant" value="1699864044" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1699251252" />
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1699251253" />
                   </RecentBranch>
                 </list>
               </option>
@@ -83,13 +89,13 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "ver2",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/ariel.pirante/IdeaProjects/ProjectManagement/src/main/resources",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "settings.editor.selected.configurable": "File.Encoding"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -152,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699839927338</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="changes">
+      <option name="closed" value="true" />
+      <created>1699861726355</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699861726355</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
