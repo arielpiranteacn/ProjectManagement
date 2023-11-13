@@ -19,7 +19,7 @@ import static labs.pm.data.Rating.*;
  * @author oracle
  * @version 4.0
  */
-public abstract class Product {
+public abstract class Product implements Rateable<Product> {
     private final int id;
     private final String name;
     private final BigDecimal price;
@@ -64,11 +64,11 @@ public abstract class Product {
         return price.multiply(DISCOUNT_RATE).setScale(2, RoundingMode.HALF_UP);
     }
 
+    @Override
     public Rating getRating() {
         return rating;
     }
 
-    public abstract <T> T applyRating(Rating newRating);
 
     /**
      * Assumes that the best before date is today
@@ -84,20 +84,6 @@ public abstract class Product {
         return id + ", " + name + ", " + price + ", " + getDiscount() + ", " + rating.getStars() + " " + getBestBefore();
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-
-        if (obj instanceof Product) {
-            final Product other = (Product) obj;
-            return this.id == other.id && Objects.equals(this.name, other.name);
-
-        }
-
-        return false;
-    }
 
     @Override
     public int hashCode() {
