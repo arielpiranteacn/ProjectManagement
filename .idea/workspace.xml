@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4d3e024-bc91-487e-a1cb-54d32aa0b158" name="Changes" comment="changes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/labs/pm/data/Drink.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/labs/pm/data/Food.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/labs/pm/data/Rating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/labs/pm/data/ProductManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/labs/pm/app/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labs/pm/app/Shop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/labs/pm/data/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labs/pm/data/Drink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/labs/pm/data/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labs/pm/data/Food.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/labs/pm/data/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labs/pm/data/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,20 +78,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Shop" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="temurin-11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="labs.pm.app.Shop" />
       <module name="ProjectManagement" />
       <method v="2">
@@ -121,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699254356351</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="changes">
+      <option name="closed" value="true" />
+      <created>1699349699367</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699349699367</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

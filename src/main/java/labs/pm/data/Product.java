@@ -2,6 +2,8 @@ package labs.pm.data;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.time.LocalDate;
+import java.util.Objects;
 
 import static labs.pm.data.Rating.*;
 
@@ -17,26 +19,18 @@ import static labs.pm.data.Rating.*;
  * @author oracle
  * @version 4.0
  */
-public class Product {
+public abstract class Product {
     private final int id;
     private final String name;
     private final BigDecimal price;
 
     private final Rating rating;
 
-    public Product(int id, String name, BigDecimal price, Rating rating) {
+    Product(int id, String name, BigDecimal price, Rating rating) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.rating = rating;
-    }
-
-    public Product(int id, String name, BigDecimal price) {
-        this(id, name, price, NOT_RATED);
-    }
-
-    public Product() {
-        this(0, "no name", BigDecimal.ZERO);
     }
 
     /**
@@ -73,7 +67,42 @@ public class Product {
     public Rating getRating() {
         return rating;
     }
-    public Product applyRating(Rating newRating){
-        return new Product(this.id, this.name, this.price, newRating);
+
+    public abstract <T> T applyRating(Rating newRating);
+
+    /**
+     * Assumes that the best before date is today
+     *
+     * @return the current date
+     */
+    public java.time.LocalDate getBestBefore() {
+        return LocalDate.now();
+    }
+
+    @Override
+    public String toString() {
+        return id + ", " + name + ", " + price + ", " + getDiscount() + ", " + rating.getStars() + " " + getBestBefore();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+
+        if (obj instanceof Product) {
+            final Product other = (Product) obj;
+            return this.id == other.id && Objects.equals(this.name, other.name);
+
+        }
+
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 89 * hash + this.id;
+        return hash;
     }
 }
