@@ -28,7 +28,8 @@ public class Shop {
         pm.reviewProduct(101, Rating.FOUR_STAR, "Good tea");
         pm.reviewProduct(101, Rating.FIVE_STAR, "Perfect tea");
         pm.reviewProduct(101, Rating.THREE_STAR, "Just add some lemon");
-//        pm.printProductReport(101);
+        pm.printProductReport(101);
+        pm.printProductReport(42);
 
         pm.createProduct(102, "Coffee", BigDecimal.valueOf(1.99), Rating.NOT_RATED);
         pm.reviewProduct(102, Rating.THREE_STAR, "Coffee was ok");
@@ -63,7 +64,7 @@ public class Shop {
         pm.reviewProduct(106, Rating.ONE_STAR, "I don't get it!");
 //        pm.printProductReport(106);
 
-        Predicate<Product> filter = p->p.getPrice().floatValue() < 2;
+        Predicate<Product> filter = p -> p.getPrice().floatValue() < 2;
         pm.printProducts(filter, (p1, p2) -> p2.getRating().ordinal() - p1.getRating().ordinal());
 
         pm.printProducts(filter, (p1, p2) -> p2.getPrice().compareTo(p1.getPrice()));
@@ -75,6 +76,7 @@ public class Shop {
 
         pm.printProducts(filter, ratingSorter.thenComparing(priceSorter).reversed());
 
+        pm.getDiscounts().forEach((rating, discount) -> System.out.println(rating + "\t" + discount));
 //        Product p2 = pm.createProduct(102, "Coffee", BigDecimal.valueOf(1.99), Rating.FOUR_STAR);
 //        Product pm.createProduct(103, "Cake", BigDecimal.valueOf(3.99), Rating.FIVE_STAR, LocalDate.now().plusDays(2));
 //        Product pm.createProduct(105, "Cookie", BigDecimal.valueOf(3.99), Rating.TWO_STAR, LocalDate.now());
