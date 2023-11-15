@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import java.util.function.Predicate;
 
 /**
  * {@code Shop} class represents an application that manages Products
@@ -62,16 +63,17 @@ public class Shop {
         pm.reviewProduct(106, Rating.ONE_STAR, "I don't get it!");
 //        pm.printProductReport(106);
 
-        pm.printProducts((p1, p2) -> p2.getRating().ordinal() - p1.getRating().ordinal());
+        Predicate<Product> filter = p->p.getPrice().floatValue() < 2;
+        pm.printProducts(filter, (p1, p2) -> p2.getRating().ordinal() - p1.getRating().ordinal());
 
-        pm.printProducts((p1, p2) -> p2.getPrice().compareTo(p1.getPrice()));
+        pm.printProducts(filter, (p1, p2) -> p2.getPrice().compareTo(p1.getPrice()));
 
         Comparator<Product> ratingSorter = (p1, p2) -> p2.getRating().ordinal() - p1.getRating().ordinal();
         Comparator<Product> priceSorter = (p1, p2) -> p2.getPrice().compareTo(p1.getPrice());
 
-        pm.printProducts(ratingSorter.thenComparing(priceSorter));
+        pm.printProducts(filter, ratingSorter.thenComparing(priceSorter));
 
-        pm.printProducts(ratingSorter.thenComparing(priceSorter).reversed());
+        pm.printProducts(filter, ratingSorter.thenComparing(priceSorter).reversed());
 
 //        Product p2 = pm.createProduct(102, "Coffee", BigDecimal.valueOf(1.99), Rating.FOUR_STAR);
 //        Product pm.createProduct(103, "Cake", BigDecimal.valueOf(3.99), Rating.FIVE_STAR, LocalDate.now().plusDays(2));

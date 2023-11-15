@@ -7,6 +7,8 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.*;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class ProductManager {
 
@@ -48,15 +50,22 @@ public class ProductManager {
         txt.append(formatter.formatProduct(product));
         txt.append("\n");
 
-        for (Review review : reviews) {
-            if (review == null) break;
-            txt.append(formatter.formatReview(review));
-            txt.append("\n");
-        }
         if (reviews.isEmpty()) {
-            txt.append(formatter.getText("no.reviews"));
-            txt.append("\n");
+            txt.append(formatter.getText("no.reviews") + "\n");
+        } else {
+            txt.append(reviews.stream()
+                    .map(r -> formatter.formatReview(r) + '\n')
+                    .collect(Collectors.joining()));
         }
+//        for (Review review : reviews) {
+//            if (review == null) break;
+//            txt.append(formatter.formatReview(review));
+//            txt.append("\n");
+//        }
+//        if (reviews.isEmpty()) {
+//            txt.append(formatter.getText("no.reviews"));
+//            txt.append("\n");
+//        }
 
         System.out.println(txt);
     }
@@ -65,14 +74,19 @@ public class ProductManager {
         printProductReport(findProduct(id));
     }
 
-    public void printProducts(Comparator<Product> sorter) {
-        List<Product> productList = new ArrayList<>(products.keySet());
-        productList.sort(sorter);
+    public void printProducts(Predicate<Product> filter, Comparator<Product> sorter) {
+//        List<Product> productList = new ArrayList<>(products.keySet());
+//        productList.sort(sorter);
         StringBuilder txt = new StringBuilder();
-        for (Product product : productList) {
-            txt.append(formatter.formatProduct(product));
-            txt.append("\n");
-        }
+        products.keySet()
+                .stream()
+                .sorted(sorter)
+                .filter(filter)
+                .forEach(p -> txt.append(formatter.formatProduct(p) + '\n'));
+//        for (Product product : productList) {
+//            txt.append(formatter.formatProduct(product));
+//            txt.append("\n");
+//        }
         System.out.println(txt);
 
     }
@@ -100,13 +114,21 @@ public class ProductManager {
         // you will add a review and apply new rating to the product object
         reviews.add(new Review(rating, comments));
 
-        int sum = 0;
+        product = product.applyRating(
+                Rateable.convert(
+                        (int) Math.round(
+                                reviews.stream()
+                                        .mapToInt(r -> r.getRating().ordinal())
+                                        .average()
+                                        .orElse(0))));
 
-        for (Review review : reviews) {
-            sum += review.getRating().ordinal();
-        }
-
-        product = product.applyRating(Rateable.convert(Math.round((float) sum / reviews.size())));
+//        int sum = 0;
+//
+//        for (Review review : reviews) {
+//            sum += review.getRating().ordinal();
+//        }
+//
+//        product = product.applyRating(Rateable.convert(Math.round((float) sum / reviews.size())));
 
         Collections.sort(reviews);
 
@@ -120,14 +142,19 @@ public class ProductManager {
     }
 
     public Product findProduct(int id) {
-        Product result = null;
-        for (Product product : products.keySet()) {
-            if (product.getId() == id) {
-                result = product;
-                break;
-            }
-        }
-        return result;
+
+        return products.keySet().stream()
+                .filter(p -> p.getId() == id)
+                .findFirst()
+                .orElseGet(() -> null);
+//        Product result = null;
+//        for (Product product : products.keySet()) {
+//            if (product.getId() == id) {
+//                result = product;
+//                break;
+//            }
+//        }
+//        return result;
     }
 
 
