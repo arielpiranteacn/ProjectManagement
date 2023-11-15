@@ -8,12 +8,17 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.*;
 import java.util.function.Predicate;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class ProductManager {
 
 //    private Product product;
 //    private Review[] reviews = new Review[5];
+
+    private static final Logger logger =
+            Logger.getLogger(ProductManager.class.getName());
 
     private Map<Product, List<Review>> products = new HashMap<>();
 
@@ -71,7 +76,11 @@ public class ProductManager {
     }
 
     public void printProductReport(int id) {
-        printProductReport(findProduct(id));
+        try {
+            printProductReport(findProduct(id));
+        } catch (ProductManagerException ex) {
+            logger.log(Level.INFO, ex.getMessage());
+        }
     }
 
     public void printProducts(Predicate<Product> filter, Comparator<Product> sorter) {
@@ -138,15 +147,22 @@ public class ProductManager {
     }
 
     public Product reviewProduct(int id, Rating rating, String comments) {
-        return reviewProduct(findProduct(id), rating, comments);
+        try {
+            return reviewProduct(findProduct(id), rating, comments);
+        } catch (ProductManagerException ex) {
+            logger.log(Level.INFO, ex.getMessage());
+            return null;
+        }
     }
 
-    public Product findProduct(int id) {
+    public Product findProduct(int id) throws ProductManagerException {
 
         return products.keySet().stream()
                 .filter(p -> p.getId() == id)
                 .findFirst()
-                .orElseGet(() -> null);
+                .orElseThrow(
+                        () -> new ProductManagerException("Product with id " + id + " not found")
+                );
 //        Product result = null;
 //        for (Product product : products.keySet()) {
 //            if (product.getId() == id) {
@@ -157,7 +173,7 @@ public class ProductManager {
 //        return result;
     }
 
-    public Map<String, String> getDiscounts(){
+    public Map<String, String> getDiscounts() {
         return products.keySet()
                 .stream()
                 .collect(
@@ -167,7 +183,7 @@ public class ProductManager {
                                         Collectors.summingDouble(
                                                 product -> product.getDiscount().doubleValue()
                                         ),
-                                                discount -> formatter.moneyFormat.format(discount)
+                                        discount -> formatter.moneyFormat.format(discount)
 
                                 )
                         )
