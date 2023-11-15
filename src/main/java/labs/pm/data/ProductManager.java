@@ -29,15 +29,15 @@ public class ProductManager {
         formatter = formatters.getOrDefault(languageTag, formatters.get("en-GB"));
     }
 
-    public static Set<String> getSupportedLocales(){
+    public static Set<String> getSupportedLocales() {
         return formatters.keySet();
     }
 
-    public ProductManager(String languageTag){
+    public ProductManager(String languageTag) {
         changeLocale(languageTag);
     }
 
-    public ProductManager(Locale locale){
+    public ProductManager(Locale locale) {
         this(locale.toLanguageTag());
     }
 
@@ -63,6 +63,18 @@ public class ProductManager {
 
     public void printProductReport(int id) {
         printProductReport(findProduct(id));
+    }
+
+    public void printProducts(Comparator<Product> sorter) {
+        List<Product> productList = new ArrayList<>(products.keySet());
+        productList.sort(sorter);
+        StringBuilder txt = new StringBuilder();
+        for (Product product : productList) {
+            txt.append(formatter.formatProduct(product));
+            txt.append("\n");
+        }
+        System.out.println(txt);
+
     }
 
     public Product createProduct(int id, String name, BigDecimal price, Rating rating, LocalDate bestBefore) {
