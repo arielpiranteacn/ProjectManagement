@@ -24,7 +24,6 @@ public class Shop {
 //        pm.createProduct(101, "Tea", BigDecimal.valueOf(1.99), Rating.NOT_RATED);
         pm.parseProduct("D,101,Tea,1.99,0,2019-09-19"); // date would not be used.
 //        pm.parseProduct("D,101,Tea,1.99,0"); // has intended errors
-        pm.printProductReport(101);
         pm.parseReview("101,4,Nice hot cup of tea");
         pm.parseReview("101,2,Rather weak tea");
         pm.parseReview("101,4,Fine tea");
