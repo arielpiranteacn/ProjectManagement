@@ -1,6 +1,7 @@
 package labs.pm.data;
 
 import java.math.BigDecimal;
+import java.nio.file.Path;
 import java.text.MessageFormat;
 import java.text.NumberFormat;
 import java.text.ParseException;
@@ -39,6 +40,12 @@ public class ProductManager {
     private MessageFormat reviewFormat = new MessageFormat(config.getString("review.data.format"));
 
     private MessageFormat productFormat = new MessageFormat(config.getString("product.data.format"));
+
+    private Path reportsFolder = Path.of(config.getString("reports.folder"));
+
+    private Path dataFolder = Path.of(config.getString("data.folder"));
+
+    private Path tempFolder = Path.of(config.getString("temp.folder"));
 
     public void changeLocale(String languageTag) {
         formatter = formatters.getOrDefault(languageTag, formatters.get("en-GB"));

@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4d3e024-bc91-487e-a1cb-54d32aa0b158" name="Changes" comment="changes">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/labs/pm/app/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labs/pm/app/Shop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/labs/pm/data/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labs/pm/data/ProductManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/resources2.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +209,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700018381723</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="changes">
+      <option name="closed" value="true" />
+      <created>1700111899000</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1700111899000</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -234,12 +240,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/labs/pm/data/ProductManager.java</url>
-          <line>237</line>
+          <line>244</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/labs/pm/data/ProductManager.java</url>
-          <line>228</line>
+          <line>235</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
