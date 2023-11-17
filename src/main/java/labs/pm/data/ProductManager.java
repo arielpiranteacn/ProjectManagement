@@ -1,8 +1,6 @@
 package labs.pm.data;
 
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
+import java.io.*;
 import java.math.BigDecimal;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -12,6 +10,7 @@ import java.nio.file.StandardOpenOption;
 import java.text.MessageFormat;
 import java.text.NumberFormat;
 import java.text.ParseException;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -194,8 +193,6 @@ public class ProductManager {
     }
 
 
-
-
     public Product findProduct(int id) throws ProductManagerException {
 
         return products.keySet().stream()
@@ -260,7 +257,7 @@ public class ProductManager {
     }
 
     private Product loadProduct(Path file) {
-        System.out.println("load product = "+file);
+//        System.out.println("load product = " + file);
         Product product = null;
         try {
             product = parseProduct(
@@ -315,7 +312,7 @@ public class ProductManager {
      * @param text String input
      */
     private Product parseProduct(String text) {
-        System.out.println("text="+text);
+//        System.out.println("text=" + text);
         Product product = null;
         try {
             Object[] values = productFormat.parse(text);
@@ -341,6 +338,49 @@ public class ProductManager {
         return product;
     }
 
+    private void dumpData() {
+        try {
+            if (Files.notExists(tempFolder)) {
+                Files.createDirectory(tempFolder);
+            }
+
+            Instant instant = Instant.now();
+            long timeStampMillis = instant.toEpochMilli();
+
+            Path tempFile = tempFolder.resolve(
+                    MessageFormat.format(config.getString("temp.file"), String.valueOf(timeStampMillis))
+            );
+
+            try (ObjectOutputStream out = new ObjectOutputStream(
+                    Files.newOutputStream(tempFile, StandardOpenOption.CREATE)
+            )) {
+                out.writeObject(products);
+                products = new HashMap<>();
+            }
+
+        } catch (IOException ex) {
+            logger.log(Level.SEVERE, "Error dumping data " + ex.getMessage(), ex);
+        }
+    }
+
+    @SuppressWarnings("unchecked")
+    private void restoreData() {
+        try {
+            Path tempFile = Files.list(tempFolder)
+                    .filter(path ->
+                            path.getFileName().toString().endsWith("tmp"))
+                    .findFirst().orElseThrow();
+
+            try(ObjectInputStream in = new ObjectInputStream(
+                    Files.newInputStream(tempFile,
+                            StandardOpenOption.DELETE_ON_CLOSE
+            ))){
+                products = (HashMap) in.readObject();
+            }
+        } catch (Exception ex) {
+            logger.log(Level.SEVERE, "Error restoring data " + ex.getMessage(), ex);
+        }
+    }
 
     private static class ResourceFormatter {
         private Locale locale;

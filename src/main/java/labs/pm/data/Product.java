@@ -1,5 +1,6 @@
 package labs.pm.data;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.LocalDate;
@@ -19,7 +20,7 @@ import static labs.pm.data.Rating.*;
  * @author oracle
  * @version 4.0
  */
-public abstract class Product implements Rateable<Product> {
+public abstract class Product implements Rateable<Product>, Serializable {
     private final int id;
     private final String name;
     private final BigDecimal price;

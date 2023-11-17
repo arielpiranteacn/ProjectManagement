@@ -5,22 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4d3e024-bc91-487e-a1cb-54d32aa0b158" name="Changes" comment="changes">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/data/product101.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/data/product102.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/data/product103.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/data/product104.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/data/product105.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/data/product106.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/reports/reviews101.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/reports/reviews102.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/reports/reviews103.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/reports/reviews104.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/reports/reviews105.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/reports/reviews106.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/labs/pm/app/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labs/pm/app/Shop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/labs/pm/data/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labs/pm/data/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/labs/pm/data/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labs/pm/data/ProductManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/labs/pm/data/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labs/pm/data/Review.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ver5" />
+        <entry key="$PROJECT_DIR$" value="ver6" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,6 +49,10 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="ver7" />
+                    <option name="lastUsedInstant" value="1700189175" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="ver6" />
                     <option name="lastUsedInstant" value="1700120492" />
                   </RecentBranch>
@@ -74,10 +67,6 @@
                   <RecentBranch>
                     <option name="branchName" value="ver3_streams" />
                     <option name="lastUsedInstant" value="1700012891" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="ver2" />
-                    <option name="lastUsedInstant" value="1699864044" />
                   </RecentBranch>
                 </list>
               </option>
@@ -109,7 +98,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "ver6",
+    "git-widget-placeholder": "ver7",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/ariel.pirante/IdeaProjects/ProjectManagement/src/main/resources/home/oracle/labs/data",
     "project.structure.last.edited": "Modules",
@@ -252,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700119513986</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="changes">
+      <option name="closed" value="true" />
+      <created>1700189083767</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1700189083767</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -278,18 +275,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/labs/pm/data/ProductManager.java</url>
-          <line>330</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/labs/pm/data/ProductManager.java</url>
-          <line>321</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/labs/pm/data/ProductManager.java</url>
-          <line>263</line>
-          <option name="timeStamp" value="9" />
+          <line>349</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

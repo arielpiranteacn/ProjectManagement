@@ -149,6 +149,7 @@ public class Shop {
         pm.reviewProduct(164, Rating.FOUR_STAR, "Fine tea");
         pm.reviewProduct(164, Rating.FOUR_STAR, "This is not tea");
         pm.reviewProduct(164, Rating.FIVE_STAR, "Perfect!");
+
         pm.printProductReport(164);
         pm.printProducts(p -> p.getPrice().floatValue() < 2,
                 (p1, p2) -> p2.getRating().ordinal() - p1.getRating().ordinal());
