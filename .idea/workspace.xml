@@ -7,9 +7,8 @@
     <list default="true" id="e4d3e024-bc91-487e-a1cb-54d32aa0b158" name="Changes" comment="changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/labs/pm/app/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labs/pm/app/Shop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/labs/pm/data/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labs/pm/data/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/labs/pm/data/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labs/pm/data/ProductManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/labs/pm/data/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labs/pm/data/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ver6" />
+        <entry key="$PROJECT_DIR$" value="ver7" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,6 +48,10 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="ver8_concurrency" />
+                    <option name="lastUsedInstant" value="1700198981" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="ver7" />
                     <option name="lastUsedInstant" value="1700189175" />
                   </RecentBranch>
@@ -63,10 +66,6 @@
                   <RecentBranch>
                     <option name="branchName" value="ver4" />
                     <option name="lastUsedInstant" value="1700016877" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="ver3_streams" />
-                    <option name="lastUsedInstant" value="1700012891" />
                   </RecentBranch>
                 </list>
               </option>
@@ -98,7 +97,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "ver7",
+    "git-widget-placeholder": "ver8__concurrency",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/ariel.pirante/IdeaProjects/ProjectManagement/src/main/resources/home/oracle/labs/data",
     "project.structure.last.edited": "Modules",
@@ -249,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700189083767</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="changes">
+      <option name="closed" value="true" />
+      <created>1700198447373</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1700198447373</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -275,7 +282,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/labs/pm/data/ProductManager.java</url>
-          <line>349</line>
+          <line>417</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
