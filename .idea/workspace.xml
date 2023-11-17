@@ -5,6 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4d3e024-bc91-487e-a1cb-54d32aa0b158" name="Changes" comment="changes">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/data/product101.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/data/product102.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/data/product103.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/data/product104.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/data/product105.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/data/product106.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/reports/reviews101.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/reports/reviews102.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/reports/reviews103.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/reports/reviews104.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/reports/reviews105.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/home/oracle/labs/reports/reviews106.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/labs/pm/app/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labs/pm/app/Shop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/labs/pm/data/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labs/pm/data/ProductManager.java" afterDir="false" />
@@ -27,7 +39,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ver4" />
+        <entry key="$PROJECT_DIR$" value="ver5" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,6 +60,10 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="ver6" />
+                    <option name="lastUsedInstant" value="1700120492" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="ver5" />
                     <option name="lastUsedInstant" value="1700113006" />
                   </RecentBranch>
@@ -62,10 +78,6 @@
                   <RecentBranch>
                     <option name="branchName" value="ver2" />
                     <option name="lastUsedInstant" value="1699864044" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1699251253" />
                   </RecentBranch>
                 </list>
               </option>
@@ -97,17 +109,19 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "ver5",
+    "git-widget-placeholder": "ver6",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/ariel.pirante/IdeaProjects/ProjectManagement/src/main/resources",
+    "last_opened_file_path": "C:/Users/ariel.pirante/IdeaProjects/ProjectManagement/src/main/resources/home/oracle/labs/data",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "File.Encoding"
+    "settings.editor.selected.configurable": "preferences.fileTypes"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ariel.pirante\IdeaProjects\ProjectManagement\src\main\resources\home\oracle\labs\data" />
+      <recent name="C:\Users\ariel.pirante\IdeaProjects\ProjectManagement\src\main\resources\home\oracle\labs\reports" />
       <recent name="C:\Users\ariel.pirante\IdeaProjects\ProjectManagement\src\main\resources" />
       <recent name="C:\Users\ariel.pirante\IdeaProjects\ProjectManagement\target\classes\labs\pm\app" />
       <recent name="C:\Users\ariel.pirante\IdeaProjects\ProjectManagement\src\main\java\labs\pm\app" />
@@ -230,8 +244,19 @@
       <option name="project" value="LOCAL" />
       <updated>1700112969111</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="changes">
+      <option name="closed" value="true" />
+      <created>1700119513986</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1700119513986</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -253,13 +278,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/labs/pm/data/ProductManager.java</url>
-          <line>265</line>
+          <line>330</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/labs/pm/data/ProductManager.java</url>
-          <line>256</line>
+          <line>321</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/labs/pm/data/ProductManager.java</url>
+          <line>263</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
