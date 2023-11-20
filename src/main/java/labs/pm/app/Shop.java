@@ -153,7 +153,7 @@ public class Shop {
         Callable<String> client = () -> {
             String clientId = "Client " + clientCount.incrementAndGet();
             String threadName = Thread.currentThread().getName();
-            int productId = ThreadLocalRandom.current().nextInt(63) + 101;
+            int productId = ThreadLocalRandom.current().nextInt(6) + 101;
             String languageTag =
                     ProductManager.getSupportedLocales()
                             .stream()
@@ -161,7 +161,6 @@ public class Shop {
                             .findFirst().get();
             StringBuilder log = new StringBuilder();
             log.append(clientId + " " + threadName + "\n-\tstart of log\t-\n");
-            log.append("\n-\tend of log\t-\n");
 
             log.append(pm.getDiscounts(languageTag)
                     .entrySet()
@@ -180,6 +179,8 @@ public class Shop {
             pm.printProductReport(productId, languageTag, clientId);
 
             log.append(clientId + " generated report for " + productId + " product");
+
+            log.append("\n-\tend of log\t-\n");
 
             return log.toString();
         };
